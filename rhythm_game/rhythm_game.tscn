@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhy78s60p2inh"]
+
+[ext_resource type="Script" path="res://rhythm_game/rhythm_game.gd" id="1_iqa04"]
+
+[node name="rhythm_game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iqa04")
+nodepath_health_bar = NodePath("health")
+nodepath_text = NodePath("text")
+nodepath_song_progress = NodePath("song_progress")
+
+[node name="song_progress" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_right = 363.0
+offset_bottom = 27.0
+
+[node name="health" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_left = 704.0
+offset_right = 1152.0
+offset_bottom = 27.0
+
+[node name="text" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 579.0
+offset_right = 1152.0
+offset_bottom = 647.0
+bbcode_enabled = true
+text = "[b]n[/b]o song loaded"
